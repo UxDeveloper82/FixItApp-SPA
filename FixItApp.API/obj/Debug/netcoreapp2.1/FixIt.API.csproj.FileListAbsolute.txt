@@ -1,0 +1,14 @@
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\bin\Debug\netcoreapp2.1\FixIt.API.deps.json
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\bin\Debug\netcoreapp2.1\FixIt.API.runtimeconfig.json
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\bin\Debug\netcoreapp2.1\FixIt.API.runtimeconfig.dev.json
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\bin\Debug\netcoreapp2.1\FixIt.API.dll
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\bin\Debug\netcoreapp2.1\FixIt.API.pdb
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.csprojAssemblyReference.cache
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.csproj.CoreCompileInputs.cache
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.RazorAssemblyInfo.cache
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.RazorAssemblyInfo.cs
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.AssemblyInfoInputs.cache
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.AssemblyInfo.cs
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.RazorTargetAssemblyInfo.cache
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.dll
+C:\Users\Martin\Desktop\FixIt\FixItApp.API\obj\Debug\netcoreapp2.1\FixIt.API.pdb
