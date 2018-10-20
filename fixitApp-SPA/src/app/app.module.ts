@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ValueComponent } from './value/value.component';
 import { AuthService } from './_services/auth.service';
 import { RegisterComponent } from './register/register.component';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -37,7 +38,8 @@ import { RegisterComponent } from './register/register.component';
       RouterModule.forRoot(appRoutes)
    ],
    providers: [
-      AuthService
+      AuthService,
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent

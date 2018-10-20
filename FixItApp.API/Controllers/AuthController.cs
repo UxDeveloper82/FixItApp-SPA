@@ -72,7 +72,8 @@ namespace FixItApp.API.Controllers
 
             var token = tokenHandler.CreateToken(TokenDescriptor);
 
-            return Ok(new {
+            return Ok(new 
+                {
                 token = tokenHandler.WriteToken(token)  
                 });
         }
