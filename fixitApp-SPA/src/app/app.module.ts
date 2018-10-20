@@ -14,6 +14,8 @@ import { MyBlogComponent } from './my-blog/my-blog.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { ValueComponent } from './value/value.component';
+import { AuthService } from './_services/auth.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
    declarations: [
@@ -25,7 +27,8 @@ import { ValueComponent } from './value/value.component';
       MyBlogComponent,
       AboutComponent,
       FooterComponent,
-      ValueComponent
+      ValueComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
@@ -33,7 +36,9 @@ import { ValueComponent } from './value/value.component';
       HttpClientModule,
       RouterModule.forRoot(appRoutes)
    ],
-   providers: [],
+   providers: [
+      AuthService
+   ],
    bootstrap: [
       AppComponent
    ]
