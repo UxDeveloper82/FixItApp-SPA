@@ -36,3 +36,4 @@ export class ErrorInterceptor implements HttpInterceptor {
     useClass: ErrorInterceptor,
     multi: true
 };
+
