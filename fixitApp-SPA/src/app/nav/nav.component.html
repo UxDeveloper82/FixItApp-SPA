@@ -2,18 +2,19 @@
      <div class="container">
       <a class="navbar-brand" [routerLink]="['/home']"><span style="color:red">Fix-It</span> Orlando</a>
      
-        <ul class="navbar-nav mr-auto">
+        <ul *ngIf="loggedIn()" class="navbar-nav mr-auto">
+            <li routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/members']">Members</a>
+            </li>
+            <li routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/lists']">Lists</a>
+            </li>
              <li routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['/about']">About</a>
+                <a class="nav-link" [routerLink]="['/messages']">Messages</a>
             </li>
-            <li routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['/services']">Services</a>
-            </li>
-            <li routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['/contact']">Contact</a>
-            </li>
-			<li routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['/blog']">Blog</a>          	
+			      <li routerLinkActive="active">
+              <a class="nav-link" [routerLink]="['/blog']">Blog</a>
+            </li>            	
         </ul>
 
         <div *ngIf="loggedIn()" class="dropdown" dropdown>

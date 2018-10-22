@@ -10,29 +10,28 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { appRoutes } from './routes';
-import { ContactComponent } from './contact/contact.component';
-import { MyServicesComponent } from './my-services/my-services.component';
 import { MyBlogComponent } from './my-blog/my-blog.component';
-import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
-import { ValueComponent } from './value/value.component';
 import { AuthService } from './_services/auth.service';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
+import { MemberListComponent } from './member-list/member-list.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import { AuthGuard } from './_guards/auth.guard';
 
 @NgModule({
    declarations: [
       AppComponent,
       HomeComponent,
       NavComponent,
-      ContactComponent,
-      MyServicesComponent,
       MyBlogComponent,
-      AboutComponent,
       FooterComponent,
-      ValueComponent,
-      RegisterComponent
+      RegisterComponent,
+      MemberListComponent,
+      ListsComponent,
+      MessagesComponent
    ],
    imports: [
       BrowserModule,
@@ -44,7 +43,8 @@ import { AlertifyService } from './_services/alertify.service';
    providers: [
       AuthService,
       ErrorInterceptorProvider,
-      AlertifyService
+      AlertifyService,
+      AuthGuard
    ],
    bootstrap: [
       AppComponent
