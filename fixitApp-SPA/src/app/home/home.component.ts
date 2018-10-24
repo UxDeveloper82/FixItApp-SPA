@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { NgxGalleryOptions, NgxGalleryImage } from 'ngx-gallery';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
   areas: any;
   registerMode = false;
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
 
   constructor(private http: HttpClient) { }
 
