@@ -5,3 +5,4 @@ export interface Photo {
     dateAdded: Date;
     isMain: boolean;
 }
+

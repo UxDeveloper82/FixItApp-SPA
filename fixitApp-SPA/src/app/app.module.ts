@@ -1,3 +1,8 @@
+import { BlogDetailResolver } from './_resolvers/blog-detail.resolver';
+import { BlogListResolver } from './_resolvers/blog-list.resolver';
+import { BlogEditComponent } from './blog/blog-edit/blog-edit.component';
+import { BlogService } from './_services/blog.service';
+import { BlogListComponent } from './blog/blog-list/blog-list.component';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { MemberListResolver } from './_resolvers/member-list.resolver';
@@ -15,7 +20,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { appRoutes } from './routes';
-import { MyBlogComponent } from './my-blog/my-blog.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthService } from './_services/auth.service';
 import { RegisterComponent } from './register/register.component';
@@ -29,6 +33,9 @@ import { MessagesComponent } from './messages/messages.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { UserService } from './_services/user.service';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { FileUploadModule } from 'ng2-file-upload';
+import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 
 
 export function tokenGetter() {
@@ -40,7 +47,8 @@ export function tokenGetter() {
       AppComponent,
       HomeComponent,
       NavComponent,
-      MyBlogComponent,
+      BlogDetailComponent,
+      BlogListComponent,
       FooterComponent,
       RegisterComponent,
       MemberListComponent,
@@ -48,7 +56,9 @@ export function tokenGetter() {
       MessagesComponent,
       MemberCardComponent,
       MemberDetailComponent,
-      MemberEditComponent
+      MemberEditComponent,
+      PhotoEditorComponent,
+      BlogEditComponent
    ],
    imports: [
       BrowserModule,
@@ -57,6 +67,7 @@ export function tokenGetter() {
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
       NgxGalleryModule,
+      FileUploadModule,
       RouterModule.forRoot(appRoutes),
       JwtModule.forRoot({
           config: {
@@ -72,10 +83,13 @@ export function tokenGetter() {
       AlertifyService,
       AuthGuard,
       UserService,
+      BlogService,
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
-      PreventUnsavedChanges
+      PreventUnsavedChanges,
+      BlogListResolver,
+      BlogDetailResolver
    ],
    bootstrap: [
       AppComponent

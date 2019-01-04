@@ -16,6 +16,24 @@ namespace FixIt.API.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.1.4-rtm-31024");
 
+            modelBuilder.Entity("FixItApp.API.Models.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Content");
+
+                    b.Property<DateTime>("Created");
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Title");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Blogs");
+                });
+
             modelBuilder.Entity("FixItApp.API.Models.Photo", b =>
                 {
                     b.Property<int>("Id")
@@ -27,6 +45,8 @@ namespace FixIt.API.Migrations
 
                     b.Property<bool>("IsMain");
 
+                    b.Property<string>("PublicId");
+
                     b.Property<string>("Url");
 
                     b.Property<int>("UserId");
@@ -36,6 +56,28 @@ namespace FixIt.API.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Photos");
+                });
+
+            modelBuilder.Entity("FixItApp.API.Models.PhotoBlog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("BlogId");
+
+                    b.Property<DateTime>("DateAdded");
+
+                    b.Property<string>("Description");
+
+                    b.Property<bool>("IsMain");
+
+                    b.Property<string>("Url");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
+
+                    b.ToTable("PhotoBlog");
                 });
 
             modelBuilder.Entity("FixItApp.API.Models.User", b =>
@@ -92,6 +134,13 @@ namespace FixIt.API.Migrations
                         .WithMany("Photos")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("FixItApp.API.Models.PhotoBlog", b =>
+                {
+                    b.HasOne("FixItApp.API.Models.Blog")
+                        .WithMany("PhotosBlog")
+                        .HasForeignKey("BlogId");
                 });
 #pragma warning restore 612, 618
         }
