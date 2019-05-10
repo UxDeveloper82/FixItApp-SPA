@@ -13,5 +13,7 @@ namespace FixItApp.API.Data
         public DbSet<Photo> Photos { get; set; }
 
         public DbSet<Blog> Blogs { get; set; }
+
+        public DbSet<Repair> Repairs { get; set; }
     }
 }

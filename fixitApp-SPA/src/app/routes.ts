@@ -15,9 +15,11 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 import { BlogListComponent } from './blog/blog-list/blog-list.component';
 import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
+import { RepairsListComponent } from './repairs/repairs-list/repairs-list.component';
 
 export const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
+    { path: 'repairs', component: RepairsListComponent},
     {
        path: '',
        runGuardsAndResolvers: 'always',

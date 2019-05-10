@@ -36,6 +36,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
+import { RepairsListComponent } from './repairs/repairs-list/repairs-list.component';
 
 
 export function tokenGetter() {
@@ -58,7 +59,8 @@ export function tokenGetter() {
       MemberDetailComponent,
       MemberEditComponent,
       PhotoEditorComponent,
-      BlogEditComponent
+      BlogEditComponent,
+      RepairsListComponent
    ],
    imports: [
       BrowserModule,
